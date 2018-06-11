@@ -11,6 +11,7 @@
 @endphp
 
 <div class="{{ $classes['formGroup'] }}">
+    @yield('scripts')
 
     @yield('label')
 
