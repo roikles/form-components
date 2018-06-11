@@ -23,21 +23,38 @@
 
 @section('input')
     <script type="text/javascript">
-        $(function () {
+        $(document).ready(function () {
             $('#datetimepicker').datetimepicker({format: 'yyyy-mm-dd hh:ii'});
         });
     </script>
-    <div class="form-group input-group date">
-        <input
-            class="{{ $classes['input'] }} form-control"
-            type="text"
-            id="datetimepicker"
-            name="{{ $name }}"
-            value="{{ $value }}"
-            @include('form::_components.attributes')
-        >
-        <span class="input-group-addon">
-            <span class="glyphicon glyphicon-calendar"></span>
-        </span>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="row">
+        <div id="datetimepicker" class="form-group input-group">
+            <input
+                    class="form-control"
+                    type="text"
+                    name="{{ $name }}"
+                    value="{{ $value }}"
+                    @include('form::_components.attributes')
+            >
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+    </div>
+
 @overwrite
