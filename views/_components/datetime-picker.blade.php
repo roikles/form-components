@@ -24,22 +24,27 @@
 @section('input')
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#datetimepicker1').flatpickr({
-                dateFormat: 'Y-n-j',
-                defaultHour: 3,
-                defaultMinute: 33,
-                enableTime: true,
-                weekNumbers: true
-            });
+            $('#datetimepicker1').datetimepicker();
+            $('#datetimepicker2').datetimepicker();
         });
     </script>
-    <div class='input-group date' id='datetimepicker1'>
-        <input type='text' class="form-control" />
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
     <div class="row">
-        <div id="datetimepicker" class="form-group input-group">
+        <div id="datetimepicker2" class="form-group input-group">
             <input
                     class="form-control"
                     type="text"
